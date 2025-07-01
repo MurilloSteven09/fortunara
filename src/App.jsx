@@ -8,11 +8,11 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { SiTiktok } from 'react-icons/si';
 
 const cardsData = [
-  { id: 1, title: 'Piscina Termal', img: Aventura },
-  { id: 2, title: 'Bosque Privado', img: Aventura },
-  { id: 3, title: 'Grupos Reducidos', img: Aventura },
-  { id: 4, title: 'Experiencia Exclusiva', img: Aventura },
-  { id: 5, title: 'Prioridad: Seguridad', img: Aventura },
+  { id: 1, title: 'Bosque Privado', img: Aventura },
+  { id: 2, title: 'Grupos Reducidos', img: Aventura },
+  { id: 3, title: 'Experiencia Exclusiva', img: Aventura },
+  { id: 4, title: 'Prioridad: Seguridad', img: Aventura },
+  { id: 5, title: 'Piscina Termal', img: Aventura },
 ]
 
 function App() {
@@ -102,7 +102,7 @@ function App() {
           </div>
 
           <div className="information">
-            <h3>Recorrido dentro de nuestro bosque privado2</h3>
+            <h3>Recorrido dentro de nuestro bosque privado{cardsData[activeIndex].id}</h3>
             <h4>SUPER QUADS</h4>
           </div>
         </div>
