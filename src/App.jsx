@@ -100,6 +100,11 @@ function App() {
             <img src={cardsData[rightIndex].img} alt={cardsData[rightIndex].title} />
             <p>{cardsData[rightIndex].title}</p>
           </div>
+
+          <div className="information">
+            <h3>Recorrido dentro de nuestro bosque privado2</h3>
+            <h4>SUPER QUADS</h4>
+          </div>
         </div>
 
         <div className="llanta-container">
