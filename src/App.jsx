@@ -47,7 +47,6 @@ function App() {
 
     setRotation((prev) => prev + deltaX * 0.5)
 
-    // Solo cambiar activeIndex si el desplazamiento acumulado supera 40px
     if (movedDistance.current > 40) {
       setActiveIndex((prev) => (prev === 0 ? cardsData.length - 1 : prev - 1))
       movedDistance.current = 0
@@ -57,31 +56,30 @@ function App() {
     }
   }
 
-  // Cálculo para índices lateral izquierdo y derecho con wrap-around
   const leftIndex = (activeIndex - 1 + cardsData.length) % cardsData.length
   const rightIndex = (activeIndex + 1) % cardsData.length
 
   return (
     <div className="app">
       <header className="header">
-  <div className="header-left">
-    <h1>SUPER QUADS</h1>
-    <nav className="nav">
-      <a href="#">Tour</a>
-      <a href="#">Galería de Aventuras</a>
-      <a href="#">Acerca de</a>
-    </nav>
-  </div>
-  <div className="header-right">
-    <div className="social-icons">
-      
-      <a href="#" class="icon-link"><WhatsAppIcon/></a>
-      <a href="#" class="icon-link"><SiTiktok size={22}/></a>
-      <a href="#" class="icon-link"><InstagramIcon/></a>
-    </div>
-    <button className="btn-reservar">RESERVAR <ArrowCircleRightIcon style={{ fontSize: '1.8rem' }} /></button>
-  </div>
-</header>
+        <div className="header-left">
+          <h1>SUPER QUADS</h1>
+          <nav className="nav">
+            <a href="#">Tour</a>
+            <a href="#">Galería de Aventuras</a>
+            <a href="#">Acerca de</a>
+          </nav>
+        </div>
+        <div className="header-right">
+          <div className="social-icons">
+            
+            <a href="#" class="icon-link"><WhatsAppIcon/></a>
+            <a href="#" class="icon-link"><SiTiktok size={22}/></a>
+            <a href="#" class="icon-link"><InstagramIcon/></a>
+          </div>
+          <button className="btn-reservar">RESERVAR <ArrowCircleRightIcon style={{ fontSize: '1.8rem' }} /></button>
+        </div>
+      </header>
 
       <section className="slider">
 
@@ -124,7 +122,6 @@ function App() {
 
       <div className="galeria">
         <div className="galeria-contenido">
-          {/* Columna izquierda */}
           <div className="galeria-left">
             <div className="galeria-header">
               <h2>GALERÍA DE AVENTURAS</h2>
@@ -137,8 +134,6 @@ function App() {
               <img src={Aventura} alt="Galería" className="galeria-img" />
             </div>
           </div>
-
-          {/* Columna derecha */}
           <div className="galeria-right">
             <img src={Aventura} alt="Galería" className="galeria-img grande" />
           </div>
